@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — OWNI</title>
+  <style>
+    :root {
+      --primary: #00D4C4;
+      --navy: #0B132B;
+      --background: #F5F7FA;
+      --gray: #6B7280;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .updated { color: var(--gray); font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    p, li { color: #333; margin-bottom: 0.75rem; }
+    ul { padding-left: 1.5rem; }
+    a { color: var(--navy); }
+    .back { display: inline-block; margin-bottom: 2rem; color: var(--gray); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="/">&larr; Retour</a>
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : [DATE À COMPLÉTER]</p>
+
+    <h2>Qui sommes-nous</h2>
+    <p>OWNI est une application mobile qui aide ses utilisateurs à gérer leurs achats : factures, garanties et délais de retour. La présente politique décrit quelles données nous traitons et comment.</p>
+
+    <h2>Données que nous collectons</h2>
+    <ul>
+      <li><strong>Compte utilisateur</strong> : adresse e-mail et mot de passe (chiffré) utilisés pour créer votre compte OWNI.</li>
+      <li><strong>Données Gmail</strong> : avec votre autorisation explicite (OAuth Google), OWNI accède en lecture seule à vos e-mails afin d'identifier les confirmations d'achat et les factures. Seuls les e-mails pertinents (reçus, confirmations de commande, factures) sont analysés.</li>
+      <li><strong>Données d'achat extraites</strong> : nom du produit, marchand, date, prix, devise, pièce jointe de facture, informations de garantie et de retour.</li>
+    </ul>
+
+    <h2>Utilisation des données Google</h2>
+    <p>L'utilisation par OWNI des informations reçues des API Google respecte la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Politique relative aux données utilisateur des services API Google</a>, y compris les exigences d'utilisation limitée (« Limited Use »).</p>
+    <ul>
+      <li>Nous n'utilisons les données Gmail que pour fournir les fonctionnalités visibles de l'application (détection des achats, coffre-fort de factures, alertes de retour et de garantie).</li>
+      <li>Nous ne vendons jamais vos données.</li>
+      <li>Nous ne transférons pas vos données Gmail à des tiers, sauf lorsque cela est nécessaire pour fournir le service (voir « Sous-traitants » ci-dessous), pour respecter la loi, ou avec votre consentement explicite.</li>
+      <li>Aucun humain ne lit vos e-mails, sauf avec votre consentement explicite (par exemple pour du support), pour des raisons de sécurité, ou pour respecter une obligation légale.</li>
+      <li>Les données Gmail ne sont pas utilisées pour entraîner des modèles d'intelligence artificielle généralistes.</li>
+    </ul>
+
+    <h2>Sous-traitants techniques</h2>
+    <ul>
+      <li><strong>Supabase</strong> (hébergement de la base de données et des fichiers, région Paris, Union européenne) : stockage de votre compte, de vos fiches d'achat et de vos factures.</li>
+      <li><strong>Anthropic</strong> (traitement IA) : le contenu des e-mails d'achat est transmis à l'API d'Anthropic uniquement pour en extraire les informations structurées (produit, prix, dates). Ces données ne sont pas utilisées par Anthropic pour entraîner ses modèles.</li>
+      <li><strong>Google</strong> (API Gmail) : accès en lecture à votre boîte mail, que vous pouvez révoquer à tout moment.</li>
+    </ul>
+
+    <h2>Conservation et suppression</h2>
+    <p>Vos données sont conservées tant que votre compte est actif. Vous pouvez à tout moment :</p>
+    <ul>
+      <li>Déconnecter votre compte Gmail depuis l'application, ce qui interrompt toute nouvelle collecte.</li>
+      <li>Révoquer l'accès de OWNI depuis votre <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">compte Google</a>.</li>
+      <li>Demander la suppression complète de votre compte et de vos données en nous contactant à l'adresse ci-dessous.</li>
+    </ul>
+
+    <h2>Sécurité</h2>
+    <p>Les données sont chiffrées en transit (HTTPS/TLS). Les jetons d'accès Gmail sont stockés de manière sécurisée et ne sont jamais exposés à l'application cliente. L'accès aux données est cloisonné par utilisateur.</p>
+
+    <h2>Vos droits (RGPD)</h2>
+    <p>Conformément au Règlement général sur la protection des données, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez-nous.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question relative à cette politique : <strong>[EMAIL DE CONTACT À COMPLÉTER]</strong></p>
+  </div>
+</body>
+</html>
