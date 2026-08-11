@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OWNI — Le gestionnaire intelligent de vos achats</title>
+  <meta name="description" content="OWNI détecte automatiquement vos achats en ligne depuis vos e-mails de confirmation et centralise factures, garanties et délais de retour.">
   <style>
     :root {
       --primary: #00D4C4;
@@ -16,31 +17,24 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--background);
       color: var(--navy);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .hero {
       text-align: center;
-      padding: 2rem;
+      padding: 5rem 1.5rem 3rem;
     }
     .logo {
       font-size: 2.5rem;
       font-weight: 700;
       letter-spacing: 0.05em;
-      color: var(--navy);
     }
     .logo span { color: var(--primary); }
     .tagline {
       margin-top: 1rem;
       font-size: 1.15rem;
       color: var(--gray);
-      max-width: 32rem;
+      max-width: 34rem;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.6;
     }
     .badge {
@@ -53,6 +47,37 @@
       border-radius: 999px;
       font-size: 0.95rem;
     }
+    .features {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(11, 19, 43, 0.08);
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.55;
+    }
+    .how {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+      text-align: center;
+    }
+    .how h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+    .how p { color: var(--gray); line-height: 1.7; }
     footer {
       padding: 1.5rem;
       text-align: center;
@@ -63,12 +88,40 @@
   </style>
 </head>
 <body>
-  <main>
+  <div class="hero">
     <div class="logo">OWNI<span>.</span></div>
-    <p class="tagline">Le gestionnaire intelligent de tout ce que vous achetez.
+    <p class="tagline">OWNI est le gestionnaire intelligent de tout ce que vous achetez.
     Factures, garanties, délais de retour — automatiquement, sans saisie manuelle.</p>
     <div class="badge">Bientôt disponible</div>
-  </main>
+  </div>
+
+  <div class="features">
+    <div class="card">
+      <h2>Détection automatique</h2>
+      <p>Avec votre autorisation, OWNI lit vos e-mails de confirmation d'achat (accès en lecture seule à votre boîte Gmail) et crée une fiche pour chaque produit acheté : nom, marchand, prix, date.</p>
+    </div>
+    <div class="card">
+      <h2>Coffre-fort de factures</h2>
+      <p>Chaque facture est extraite de vos e-mails et conservée en lieu sûr. Retrouvez-la en un clic, même des années plus tard, pour un échange, un remboursement ou le SAV.</p>
+    </div>
+    <div class="card">
+      <h2>Alertes de retour</h2>
+      <p>OWNI vous prévient avant la fin du délai de retour de vos achats, pour ne plus jamais rater la date limite et perdre de l'argent.</p>
+    </div>
+    <div class="card">
+      <h2>Suivi des garanties</h2>
+      <p>OWNI suit la durée de garantie de chaque produit et vous alerte avant son expiration.</p>
+    </div>
+  </div>
+
+  <div class="how">
+    <h2>Comment fonctionne OWNI ?</h2>
+    <p>Vous connectez votre compte Gmail à OWNI en donnant votre autorisation explicite via Google.
+    OWNI analyse alors, en lecture seule, vos e-mails de confirmation de commande pour construire
+    automatiquement l'inventaire de vos achats. OWNI ne modifie, n'envoie et ne supprime jamais
+    aucun e-mail, et vous pouvez révoquer l'accès à tout moment.</p>
+  </div>
+
   <footer>
     <a href="/privacy.html">Politique de confidentialité</a> · © 2026 OWNI
   </footer>
