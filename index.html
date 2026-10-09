@@ -7,10 +7,10 @@
   <meta name="application-name" content="OWNI">
   <meta property="og:site_name" content="OWNI">
   <meta property="og:title" content="OWNI">
-  <meta property="og:description" content="OWNI est le gestionnaire intelligent de tout ce que vous achetez : factures, garanties, délais de retour.">
+  <meta property="og:description" content="OWNI tient l'inventaire de vos achats en ligne : factures, délais de retour, suivi de colis.">
   <meta property="og:url" content="https://owni.pro">
   <meta property="og:type" content="website">
-  <meta name="description" content="OWNI détecte automatiquement vos achats en ligne depuis vos e-mails de confirmation et centralise factures, garanties et délais de retour.">
+  <meta name="description" content="OWNI détecte vos achats en ligne depuis vos e-mails et centralise factures, délais de retour et suivi de colis.">
   <style>
     :root {
       --primary: #00D4C4;
@@ -42,16 +42,6 @@
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
-    }
-    .badge {
-      margin-top: 2rem;
-      display: inline-block;
-      background: var(--primary);
-      color: var(--navy);
-      font-weight: 600;
-      padding: 0.5rem 1.25rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
     }
     .features {
       max-width: 52rem;
@@ -91,45 +81,104 @@
       color: var(--gray);
     }
     footer a { color: var(--gray); }
+    footer p { margin-bottom: 0.4rem; }
+    .langnav { text-align: center; padding-top: 1.5rem; font-size: 0.9rem; }
+    .langnav a { color: var(--gray); }
+    .platform { margin-top: 1rem; font-size: 0.95rem; color: var(--gray); }
+    .how a { color: var(--navy); }
+    .alt { border-top: 1px solid #E2E6EC; }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1 class="logo">OWNI</h1>
-    <p class="tagline">OWNI est le gestionnaire intelligent de tout ce que vous achetez.
-    Factures, garanties, délais de retour — automatiquement, sans saisie manuelle.</p>
-    <div class="badge">Bientôt disponible</div>
-  </div>
+  <p class="langnav"><a href="#fr">Français</a> · <a href="#en" lang="en">English</a></p>
 
-  <div class="features">
-    <div class="card">
-      <h2>Détection automatique</h2>
-      <p>Avec votre autorisation, OWNI lit vos e-mails de confirmation d'achat (accès en lecture seule à votre boîte Gmail) et crée une fiche pour chaque produit acheté : nom, marchand, prix, date.</p>
+  <section id="fr" lang="fr">
+    <div class="hero">
+      <h1 class="logo">OWNI</h1>
+      <p class="tagline">OWNI tient l'inventaire de vos achats en ligne à partir de vos e-mails.
+      Factures, délais de retour, suivi de colis — sans saisie manuelle.</p>
+      <p class="platform">Application mobile pour Android.</p>
     </div>
-    <div class="card">
-      <h2>Coffre-fort de factures</h2>
-      <p>Chaque facture est extraite de vos e-mails et conservée en lieu sûr. Retrouvez-la en un clic, même des années plus tard, pour un échange, un remboursement ou le SAV.</p>
-    </div>
-    <div class="card">
-      <h2>Alertes de retour</h2>
-      <p>OWNI vous prévient avant la fin du délai de retour de vos achats, pour ne plus jamais rater la date limite et perdre de l'argent.</p>
-    </div>
-    <div class="card">
-      <h2>Suivi des garanties</h2>
-      <p>OWNI suit la durée de garantie de chaque produit et vous alerte avant son expiration.</p>
-    </div>
-  </div>
 
-  <div class="how">
-    <h2>Comment fonctionne OWNI ?</h2>
-    <p>Vous connectez votre compte Gmail à OWNI en donnant votre autorisation explicite via Google.
-    OWNI analyse alors, en lecture seule, vos e-mails de confirmation de commande pour construire
-    automatiquement l'inventaire de vos achats. OWNI ne modifie, n'envoie et ne supprime jamais
-    aucun e-mail, et vous pouvez révoquer l'accès à tout moment.</p>
-  </div>
+    <div class="features">
+      <div class="card">
+        <h2>Détection automatique</h2>
+        <p>Avec votre autorisation, OWNI lit vos e-mails d'achat (accès en lecture seule à votre boîte Gmail) et crée une fiche pour chaque commande de biens physiques : marchand, produits, montant, date. Les achats numériques, les services et les abonnements ne sont pas ajoutés à l'inventaire.</p>
+      </div>
+      <div class="card">
+        <h2>Coffre-fort de factures</h2>
+        <p>Quand l'e-mail d'achat contient une facture en PDF, OWNI la conserve dans un espace privé et vous permet de la rouvrir depuis l'application. Les achats sans facture sont signalés.</p>
+      </div>
+      <div class="card">
+        <h2>Alertes de retour</h2>
+        <p>Quand le délai de retour d'un achat se referme, OWNI l'affiche dans l'application et vous envoie un e-mail. Les alertes par e-mail se désactivent depuis le profil ou par le lien présent dans chaque message.</p>
+      </div>
+      <div class="card">
+        <h2>Suivi de colis</h2>
+        <p>Les e-mails d'expédition sont rattachés à vos commandes : transporteur, numéro de suivi et lien vers la page du transporteur. L'état affiché est celui annoncé par l'e-mail.</p>
+      </div>
+      <div class="card">
+        <h2>Repère de garantie</h2>
+        <p>Chaque fiche affiche un statut de garantie indicatif, calculé sur une durée par défaut de 12 mois à compter de la date d'achat. Ce n'est pas la durée réelle de garantie de votre produit.</p>
+      </div>
+    </div>
+
+    <div class="how">
+      <h2>Comment fonctionne OWNI ?</h2>
+      <p>Vous connectez votre compte Gmail à OWNI en donnant votre autorisation explicite via Google.
+      OWNI recherche alors, en lecture seule, les e-mails dont l'objet évoque un achat, une livraison,
+      un retour ou un abonnement, et les classe automatiquement pour construire l'inventaire de vos achats.
+      OWNI ne modifie, n'envoie et ne supprime jamais aucun e-mail, et vous pouvez retirer l'accès à tout
+      moment depuis l'application. Le détail figure dans la
+      <a href="/privacy.html">politique de confidentialité</a>.</p>
+    </div>
+  </section>
+
+  <section id="en" lang="en" class="alt">
+    <div class="hero">
+      <p class="logo" aria-hidden="true">OWNI</p>
+      <p class="tagline">OWNI keeps an inventory of your online purchases from your emails.
+      Invoices, return deadlines, parcel tracking — with no manual entry.</p>
+      <p class="platform">Mobile app for Android. The app's interface is in French.</p>
+    </div>
+
+    <div class="features">
+      <div class="card">
+        <h2>Automatic detection</h2>
+        <p>With your authorisation, OWNI reads your purchase emails (read-only access to your Gmail mailbox) and creates an entry for each order of physical goods: merchant, products, amount, date. Digital purchases, services and subscriptions are not added to the inventory.</p>
+      </div>
+      <div class="card">
+        <h2>Invoice vault</h2>
+        <p>When the purchase email contains a PDF invoice, OWNI stores it in private storage and lets you reopen it from the app. Purchases without an invoice are flagged.</p>
+      </div>
+      <div class="card">
+        <h2>Return alerts</h2>
+        <p>When the return window of a purchase is about to close, OWNI shows it in the app and sends you an email. Email alerts can be turned off from the profile or through the link in every message.</p>
+      </div>
+      <div class="card">
+        <h2>Parcel tracking</h2>
+        <p>Shipping emails are attached to your orders: carrier, tracking number and a link to the carrier's page. The status shown is the one announced by the email.</p>
+      </div>
+      <div class="card">
+        <h2>Warranty indicator</h2>
+        <p>Each entry shows an indicative warranty status, based on a default duration of 12 months from the purchase date. It is not the actual warranty period of your product.</p>
+      </div>
+    </div>
+
+    <div class="how">
+      <h2>How does OWNI work?</h2>
+      <p>You connect your Gmail account to OWNI by giving your explicit authorisation through Google.
+      OWNI then searches, with read-only access, for emails whose subject relates to a purchase, a delivery,
+      a return or a subscription, and classifies them automatically to build the inventory of your purchases.
+      OWNI never modifies, sends or deletes any email, and you can withdraw access at any time from the app.
+      Details are in the <a href="/privacy.html#en">privacy policy</a>.</p>
+    </div>
+  </section>
 
   <footer>
-    <a href="/privacy.html">Politique de confidentialité</a> · <a href="/delete-account.html">Suppression du compte / Account deletion</a> · © 2026 OWNI
+    <!-- NOM DU DÉVELOPPEUR tel qu'il apparaît sur la fiche Google Play : à changer ICI uniquement. -->
+    <p>OWNI — <span id="developer-name">APLI SARLU</span> · <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
+    <p><a href="/privacy.html">Politique de confidentialité / <span lang="en">Privacy Policy</span></a> · <a href="/delete-account.html">Suppression du compte / <span lang="en">Account deletion</span></a> · © 2026 OWNI</p>
   </footer>
 </body>
 </html>
