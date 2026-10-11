@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    /* EN PREMIER, avant tout le reste de la page : le lien de confirmation
+       arrive ici avec des jetons de session dans le fragment de l'URL (ou un
+       code dans la query). Ils sont retirés de la barre d'adresse et de
+       l'historique tout de suite. Ce script ne les lit pas, ne les conserve
+       pas, n'envoie aucune requête : il note seulement, en mémoire, si
+       l'adresse signale une erreur, pour choisir le message affiché. */
+    var owniLinkFailed = false;
+    try {
+      owniLinkFailed = /(^|[#?&])error(_code|_description)?=/.test(location.hash + location.search);
+    } catch (e) {}
+    try {
+      history.replaceState(null, '', location.pathname);
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>OWNI – Adresse e-mail confirmée / Email address confirmed</title>
+  <style>
+    :root {
+      --primary: #00D4C4;
+      --navy: #0B132B;
+      --background: #F5F7FA;
+      --gray: #6B7280;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; line-height: 1.3; }
+    h2 { font-size: 1.2rem; margin: 0 0 0.75rem; }
+    p { color: #333; margin-bottom: 0.75rem; }
+    a { color: var(--navy); }
+    .back { display: inline-block; margin-bottom: 2rem; color: var(--gray); text-decoration: none; }
+    .langnav { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .publisher {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 1px 3px rgba(11, 19, 43, 0.08);
+      margin-bottom: 2rem;
+    }
+    .publisher p { margin-bottom: 0.25rem; }
+    .lang { border-top: 1px solid #E2E6EC; margin-top: 3rem; padding-top: 1.5rem; }
+    .lang:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+    .lang-label {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    /* Un seul des deux états est visible ; le script du bas bascule sur l'échec. */
+    .failed { display: none; }
+    .link-failed .confirmed { display: none; }
+    .link-failed .failed { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="/">&larr; Retour / Back</a>
+    <h1>OWNI</h1>
+    <p class="langnav"><a href="#fr">Français</a> · <a href="#en" lang="en">English</a></p>
+
+    <section class="lang" id="fr" lang="fr">
+      <span class="lang-label">FRANÇAIS</span>
+
+      <div class="confirmed">
+        <h2>Adresse e-mail confirmée.</h2>
+        <p>Retournez dans l'application OWNI pour vous connecter.</p>
+      </div>
+
+      <div class="failed">
+        <h2>Ce lien n'est plus valable.</h2>
+        <p>Il a expiré ou a déjà été utilisé. Si votre adresse est déjà confirmée, retournez dans l'application OWNI pour vous connecter. Sinon, écrivez-nous à <a href="mailto:contact@owni.pro">contact@owni.pro</a>.</p>
+      </div>
+    </section>
+
+    <section class="lang" id="en" lang="en">
+      <span class="lang-label">ENGLISH</span>
+
+      <div class="confirmed">
+        <h2>Email address confirmed.</h2>
+        <p>Go back to the OWNI app to sign in.</p>
+      </div>
+
+      <div class="failed">
+        <h2>This link is no longer valid.</h2>
+        <p>It has expired or has already been used. If your address is already confirmed, go back to the OWNI app to sign in. Otherwise, write to us at <a href="mailto:contact@owni.pro">contact@owni.pro</a>.</p>
+      </div>
+    </section>
+
+    <div class="publisher" style="margin-top: 3rem;">
+      <p><strong>Application :</strong> OWNI</p>
+      <!-- MENTION DU DÉVELOPPEUR : le nom affiché sur la fiche Google Play (Ali PIRBAY) et la société pour laquelle il publie. La même phrase, FR + EN, sur index, privacy, delete-account et email-confirmed. -->
+      <p><strong>Développeur / <span lang="en">Developer</span> :</strong> <span id="developer-name">OWNI est publiée sur Google Play sous le nom de développeur Ali PIRBAY, gérant d'APLI SARLU, pour le compte de cette société. <span lang="en">OWNI is published on Google Play under the developer name Ali PIRBAY, manager of APLI SARLU, on behalf of that company.</span></span></p>
+      <p><strong>Contact :</strong> <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
+    </div>
+  </div>
+
+  <script>
+    /* Rien d'autre que l'affichage : la classe choisit lequel des deux
+       messages est visible. Aucune requête, aucun stockage. */
+    if (owniLinkFailed) document.body.className = 'link-failed';
+  </script>
+</body>
+</html>

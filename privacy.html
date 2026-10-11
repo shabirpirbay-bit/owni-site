@@ -60,13 +60,13 @@
   <div class="container">
     <a class="back" href="/">&larr; Retour / Back</a>
     <h1>Politique de confidentialité<br><span lang="en">Privacy Policy</span></h1>
-    <p class="updated">Dernière mise à jour : 9 octobre 2026 · <span lang="en">Last updated: 9 October 2026</span></p>
+    <p class="updated">Dernière mise à jour : 11 octobre 2026 · <span lang="en">Last updated: 11 October 2026</span></p>
     <p class="langnav"><a href="#fr">Français</a> · <a href="#en" lang="en">English</a></p>
 
     <div class="publisher">
       <p><strong>Application :</strong> OWNI</p>
-      <!-- NOM DU DÉVELOPPEUR tel qu'il apparaît sur la fiche Google Play : à changer ICI uniquement. -->
-      <p><strong>Développeur / <span lang="en">Developer</span> :</strong> <span id="developer-name">APLI SARLU</span></p>
+      <!-- MENTION DU DÉVELOPPEUR : le nom affiché sur la fiche Google Play (Ali PIRBAY) et la société pour laquelle il publie. La même phrase, FR + EN, sur index, privacy, delete-account et email-confirmed. -->
+      <p><strong>Développeur / <span lang="en">Developer</span> :</strong> <span id="developer-name">OWNI est publiée sur Google Play sous le nom de développeur Ali PIRBAY, gérant d'APLI SARLU, pour le compte de cette société. <span lang="en">OWNI is published on Google Play under the developer name Ali PIRBAY, manager of APLI SARLU, on behalf of that company.</span></span></p>
       <p><strong>Contact :</strong> <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
     </div>
 
@@ -74,17 +74,23 @@
       <span class="lang-label">FRANÇAIS</span>
 
       <h2>1. Responsable de traitement</h2>
-      <p>OWNI est une application mobile qui importe vos achats depuis vos e-mails et en tient l'inventaire : factures, délais de retour, suivi de colis. Le responsable du traitement de vos données est :</p>
+      <p>OWNI est une application mobile qui importe vos achats depuis vos e-mails et en tient l'inventaire : factures, délais de retour, garantie légale, suivi de colis. Elle est proposée en France, en Belgique et au Luxembourg. Le responsable du traitement de vos données est :</p>
       <p><strong>APLI SARLU</strong><br>
       Logt 51 Cité Ampefiloha, Antananarivo, Madagascar<br>
       NIF 4019287505 — STAT 62011 11 2025 0 10781 — RCS 2025B00769<br>
       Contact : <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
 
-      <h2>2. Données que nous traitons</h2>
+      <h2>2. Représentant dans l'Union européenne</h2>
+      <p>APLI SARLU est établie hors de l'Union européenne. Conformément à l'article 27 du règlement (UE) 2016/679 (RGPD), elle a désigné un représentant dans l'Union :</p>
+      <p><strong>Shabir PIRBAY</strong><br>
+      Contact : <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
+      <p>Vous pouvez vous adresser à ce représentant, en plus ou à la place du responsable de traitement, pour toute question relative au traitement de vos données. Les autorités de protection des données peuvent également le saisir.</p>
+
+      <h2>3. Données que nous traitons</h2>
       <ul>
         <li><strong>Compte OWNI</strong> : votre adresse e-mail et votre mot de passe (conservé sous forme hachée par notre prestataire d'authentification, jamais en clair), ainsi que la date de création du compte.</li>
         <li><strong>Liaison Gmail</strong>, si vous connectez une boîte Gmail : l'adresse de cette boîte, le jeton de rafraîchissement délivré par Google (qui permet l'accès en lecture seule), l'état de la liaison et l'état technique du dernier relevé.</li>
-        <li><strong>Achats</strong> : marchand, produits, montant total, devise, date d'achat, date limite de retour, numéro de commande, catégorie, statut de la commande (expédiée, livrée, annulée, retournée…), emplacement de la facture et identifiant du message Gmail d'origine.</li>
+        <li><strong>Achats</strong> : marchand, produits, montant total, devise, date d'achat, date limite de retour, origine de ce délai (annoncé par le marchand, délai légal estimé, ou absence de droit de rétractation) et, dans ce dernier cas, motif de l'exclusion (par exemple « bien personnalisé »), numéro de commande, catégorie, statut de la commande (expédiée, livrée, annulée, retournée…), emplacement de la facture et identifiant du message Gmail d'origine. L'échéance estimée de la garantie légale de conformité (24 mois à compter de la date d'achat) est calculée par l'application à partir de la date d'achat ; elle n'est pas conservée sur nos serveurs.</li>
         <li><strong>Colis</strong> : transporteur, numéro de suivi, lien de suivi, état annoncé par l'e-mail et date d'expédition.</li>
         <li><strong>Traces de classement des e-mails</strong> : pour chaque e-mail classé, y compris ceux qui ne sont finalement pas retenus comme achat (par exemple une échéance d'abonnement, une réservation ou un e-mail écarté), nous conservons l'identifiant du message, le résultat du classement et son motif, ainsi que les informations extraites le cas échéant (type de document, marchand, montant, devise, date, périodicité). Cette trace évite de retraiter le même e-mail à chaque relevé.</li>
         <li><strong>Expéditeurs refusés</strong> : les domaines d'expéditeurs exclus du relevé pour votre compte, le cas échéant.</li>
@@ -94,65 +100,67 @@
       </ul>
       <p>L'application n'embarque aucun outil de mesure d'audience, de publicité ni de suivi.</p>
 
-      <h2>3. Ce que nous lisons dans votre boîte Gmail</h2>
+      <h2>4. Ce que nous lisons dans votre boîte Gmail</h2>
       <p>La connexion Gmail est facultative et se fait avec votre autorisation explicite, par l'écran de consentement de Google. OWNI ne demande qu'un accès en <strong>lecture seule</strong> : l'application ne peut ni envoyer, ni modifier, ni supprimer un e-mail.</p>
-      <p>Une fois la boîte connectée, un relevé automatique a lieu environ toutes les heures :</p>
+      <p>Une première analyse est lancée dès la connexion de la boîte ; elle porte sur les e-mails des sept derniers jours. Un relevé automatique a ensuite lieu environ toutes les heures :</p>
       <ul>
         <li>OWNI recherche les e-mails récents dont <strong>l'objet contient certains mots-clés</strong> liés à un achat, une livraison, un retrait, un retour ou un abonnement. Les e-mails que vous avez envoyés et ceux que Gmail range dans l'onglet « Promotions » sont exclus de la recherche.</li>
         <li>Les e-mails correspondants sont <strong>lus en entier</strong> (en-têtes et corps ; les pièces jointes PDF sont téléchargées lorsqu'elles servent de facture ou sont nécessaires au classement) puis classés automatiquement. Un objet qui contient l'un de ces mots-clés ne garantit pas qu'il s'agisse d'un achat : des e-mails sans rapport avec un achat peuvent donc être lus et classés, puis écartés.</li>
-        <li>Seuls les achats de <strong>biens physiques</strong> créent une fiche dans votre inventaire. Les e-mails d'expédition, de facture, d'annulation ou de retour complètent une fiche existante. Les autres e-mails ne créent aucune fiche ; il n'en reste que la trace de classement décrite en section 2.</li>
+        <li>Seuls les achats de <strong>biens physiques</strong> créent une fiche dans votre inventaire. Les e-mails d'expédition, de facture, d'annulation ou de retour complètent une fiche existante. Les autres e-mails ne créent aucune fiche ; il n'en reste que la trace de classement décrite en section 3.</li>
       </ul>
 
-      <h2>4. Finalités</h2>
+      <h2>5. Finalités</h2>
       <p>Vos données servent uniquement à fournir les fonctions visibles de l'application :</p>
       <ul>
         <li>constituer l'inventaire de vos achats ;</li>
         <li>conserver vos factures et vous permettre de les consulter ;</li>
         <li>suivre les délais de retour et vous en alerter, dans l'application et par e-mail ;</li>
         <li>afficher le suivi de vos colis ;</li>
-        <li>gérer votre compte et vous envoyer les e-mails nécessaires à son fonctionnement (codes de vérification, réinitialisation du mot de passe).</li>
+        <li>afficher l'échéance estimée de la garantie légale de conformité de vos achats ;</li>
+        <li>gérer votre compte et vous envoyer les e-mails nécessaires à son fonctionnement (confirmation de l'adresse e-mail, code de réinitialisation du mot de passe).</li>
       </ul>
+      <p>Les délais affichés reposent sur des règles européennes, communes à la France, à la Belgique et au Luxembourg : le droit de rétractation de quatorze jours pour les achats à distance (directive 2011/83/UE) et la garantie légale de conformité de deux ans (directive (UE) 2019/771), tels que transposés dans chacun de ces pays. Faute de connaître la date de livraison, OWNI les calcule à partir de la date d'achat : ce sont des estimations, qui ne remplacent ni les conditions du marchand ni un conseil juridique.</p>
       <p>Nous ne vendons pas vos données. Nous ne les utilisons ni pour de la publicité, ni pour du profilage marketing.</p>
 
-      <h2>5. Bases légales</h2>
+      <h2>6. Bases légales</h2>
       <ul>
         <li><strong>Exécution du service</strong> que vous demandez en créant un compte : gestion du compte, inventaire, factures, délais de retour, suivi de colis.</li>
-        <li><strong>Votre consentement</strong> pour l'accès à votre boîte Gmail, que vous pouvez retirer à tout moment (voir section 11).</li>
+        <li><strong>Votre consentement</strong> pour l'accès à votre boîte Gmail, que vous pouvez retirer à tout moment (voir section 12).</li>
       </ul>
 
-      <h2>6. Destinataires et sous-traitants</h2>
+      <h2>7. Destinataires et sous-traitants</h2>
       <p>Vos données ne sont transmises qu'aux prestataires nécessaires au fonctionnement du service :</p>
       <ul>
-        <li><strong>Supabase</strong> — hébergement de la base de données, de l'authentification, des fichiers et des traitements serveur. Région d'hébergement : Paris, France (Union européenne). Données : l'ensemble des données listées en section 2, à l'exception de la session conservée sur votre appareil.</li>
+        <li><strong>Supabase</strong> — hébergement de la base de données, de l'authentification, des fichiers et des traitements serveur. Région d'hébergement : Paris, France (Union européenne). Données : l'ensemble des données listées en section 3, à l'exception de la session conservée sur votre appareil.</li>
         <li><strong>Google</strong> — connexion OAuth et API Gmail en lecture seule. Google est la source des e-mails ; OWNI lui adresse uniquement les demandes d'accès et, le cas échéant, la révocation de l'autorisation.</li>
         <li><strong>Anthropic</strong> (États-Unis) — classement et extraction automatiques par intelligence artificielle. Pour chaque e-mail à classer, nous transmettons : l'expéditeur et le destinataire, l'adresse de la boîte Gmail connectée, l'objet, la date, le nom des pièces jointes et le corps de l'e-mail (jusqu'à 24 000 caractères). Lorsque le corps ne mentionne aucun montant, la pièce jointe PDF est également transmise (jusqu'à 2 Mo). Cela vaut aussi pour des e-mails qui ne sont finalement pas retenus comme achat. Deux modèles d'Anthropic sont utilisés : un premier pour tous les e-mails à classer, un second pour relire les cas incertains. Selon les conditions commerciales d'Anthropic applicables à son API, les données transmises ne servent pas à entraîner ses modèles.</li>
-        <li><strong>Resend</strong> (société établie aux États-Unis ; envoi traité dans sa région Irlande, Union européenne) — envoi des e-mails. Données : l'adresse e-mail de votre compte OWNI et le contenu des e-mails envoyés, c'est-à-dire les alertes de retour (marchand, produits, montant, date limite) et les e-mails d'authentification (codes de vérification, réinitialisation du mot de passe).</li>
+        <li><strong>Resend</strong> (société établie aux États-Unis ; envoi traité dans sa région Irlande, Union européenne) — envoi des e-mails. Données : l'adresse e-mail de votre compte OWNI et le contenu des e-mails envoyés, c'est-à-dire les alertes de retour (marchand, produits, montant, date limite), envoyées depuis <strong>alertes@owni.pro</strong>, et les e-mails de compte (confirmation de l'adresse e-mail, code de réinitialisation du mot de passe), envoyés depuis <strong>noreply@owni.pro</strong>.</li>
         <li><strong>Expo</strong> (États-Unis) — distribution des mises à jour de l'application. Au lancement, l'application interroge le service de mises à jour ; elle ne lui transmet aucune donnée d'achat ni de compte. Comme pour toute connexion Internet, des informations techniques (adresse IP, version de l'application) sont visibles par ce service.</li>
         <li><strong>GitHub Pages</strong> (États-Unis) — hébergement du présent site. L'hébergeur peut enregistrer des informations techniques de connexion (adresse IP) lors de votre visite. Ce site ne dépose aucun cookie.</li>
       </ul>
       <p>Lorsque vous ouvrez un lien de suivi de colis, la page du transporteur s'ouvre dans votre navigateur ; elle relève de la politique de ce transporteur.</p>
 
-      <h2>7. Transferts hors de l'Union européenne</h2>
+      <h2>8. Transferts hors de l'Union européenne</h2>
       <p>Certains prestataires sont établis hors de l'Union européenne, notamment aux États-Unis (Anthropic, Resend, Expo, GitHub), et le responsable de traitement est établi à Madagascar. Ces transferts sont encadrés par les engagements contractuels de ces prestataires en matière de protection des données, tels que les clauses contractuelles types de la Commission européenne lorsqu'elles s'appliquent. Vous pouvez nous écrire pour obtenir des précisions.</p>
 
-      <h2>8. Utilisation des données Google</h2>
+      <h2>9. Utilisation des données Google</h2>
       <p>L'utilisation et le transfert par OWNI des informations reçues des API Google respectent la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Politique relative aux données utilisateur des services API Google</a>, y compris les exigences d'utilisation limitée (« Limited Use »). En particulier :</p>
       <ul>
-        <li>les données Gmail ne servent qu'à fournir les fonctions visibles de l'application décrites en section 4 ;</li>
-        <li>elles ne sont transférées à des tiers que lorsque c'est nécessaire pour fournir ces fonctions (voir section 6), pour respecter une obligation légale ou pour des raisons de sécurité ;</li>
+        <li>les données Gmail ne servent qu'à fournir les fonctions visibles de l'application décrites en section 5 ;</li>
+        <li>elles ne sont transférées à des tiers que lorsque c'est nécessaire pour fournir ces fonctions (voir section 7), pour respecter une obligation légale ou pour des raisons de sécurité ;</li>
         <li>aucun humain ne lit vos e-mails, sauf avec votre consentement explicite pour des messages précis, pour des raisons de sécurité (par exemple une enquête sur un abus) ou pour respecter une obligation légale ;</li>
         <li>elles ne sont utilisées ni pour de la publicité, ni pour être vendues, ni pour développer, améliorer ou entraîner des modèles d'intelligence artificielle généralistes.</li>
       </ul>
 
-      <h2>9. Durées de conservation</h2>
+      <h2>10. Durées de conservation</h2>
       <ul>
-        <li>Vos données sont conservées <strong>tant que votre compte existe</strong>. Elles sont supprimées à la suppression du compte (voir section 11).</li>
+        <li>Vos données sont conservées <strong>tant que votre compte existe</strong>. Elles sont supprimées à la suppression du compte (voir section 12).</li>
         <li>La liaison Gmail et son jeton sont supprimés dès que vous déconnectez votre boîte Gmail.</li>
         <li>Les compteurs techniques qui limitent le nombre de tentatives de connexion à Gmail sont effacés après 24 heures.</li>
         <li>Les liens qui permettent d'ouvrir une facture sont temporaires : ils expirent au bout de 120 secondes.</li>
       </ul>
 
-      <h2>10. Sécurité</h2>
+      <h2>11. Sécurité</h2>
       <ul>
         <li>Les échanges entre l'application et nos serveurs sont chiffrés en transit (HTTPS/TLS).</li>
         <li>L'accès aux données est cloisonné par utilisateur : chaque compte ne peut lire que ses propres données.</li>
@@ -161,22 +169,22 @@
         <li>Sur votre appareil, la session est conservée sous forme chiffrée.</li>
       </ul>
 
-      <h2>11. Vos droits et vos choix</h2>
-      <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition, ainsi que du droit de retirer votre consentement à tout moment. Pour les exercer, écrivez à <a href="mailto:contact@owni.pro">contact@owni.pro</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>) ou de l'autorité de protection des données de votre pays.</p>
+      <h2>12. Vos droits et vos choix</h2>
+      <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition, ainsi que du droit de retirer votre consentement à tout moment. Pour les exercer, écrivez à <a href="mailto:contact@owni.pro">contact@owni.pro</a>. Ces droits vous sont reconnus par le règlement (UE) 2016/679 (RGPD), qui s'applique de la même façon en France, en Belgique et au Luxembourg. Vous pouvez également introduire une réclamation auprès de l'autorité de protection des données de votre pays : en France, la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>) ; en Belgique, l'Autorité de protection des données (<a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener">www.autoriteprotectiondonnees.be</a>) ; au Luxembourg, la Commission nationale pour la protection des données (<a href="https://cnpd.public.lu" target="_blank" rel="noopener">cnpd.public.lu</a>).</p>
       <p>Vous pouvez aussi agir directement :</p>
       <ul>
         <li><strong>Déconnecter Gmail</strong> : dans l'application, Profil › Connexion Gmail › « Déconnecter ». L'autorisation est alors révoquée auprès de Google et les relevés s'arrêtent ; les achats déjà importés restent dans votre compte. Vous pouvez aussi révoquer l'accès depuis votre <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">compte Google</a>.</li>
-        <li><strong>Ne plus recevoir les alertes par e-mail</strong> : par le lien de désinscription présent dans chaque alerte, ou par l'interrupteur « Alertes de retour par email » du profil.</li>
+        <li><strong>Ne plus recevoir les alertes par e-mail</strong> : par le lien de désinscription présent dans chaque alerte, ou par l'interrupteur « Alertes de retour par e-mail » du profil.</li>
         <li><strong>Supprimer votre compte et vos données</strong> : dans l'application, Profil › « Supprimer mon compte », en saisissant le mot « SUPPRIMER » ; la suppression est immédiate. Vous pouvez aussi en faire la demande par e-mail. Les deux procédures sont détaillées sur la page <a href="/delete-account.html">Suppression du compte</a>.</li>
       </ul>
 
-      <h2>12. Public visé</h2>
+      <h2>13. Public visé</h2>
       <p>OWNI est réservée aux personnes âgées de 18 ans et plus. Nous ne collectons pas sciemment de données concernant des mineurs ; si vous pensez qu'un mineur nous a transmis des données, écrivez à <a href="mailto:contact@owni.pro">contact@owni.pro</a> pour que nous les supprimions.</p>
 
-      <h2>13. Modifications</h2>
+      <h2>14. Modifications</h2>
       <p>Cette politique est mise à jour lorsque le fonctionnement de l'application change. La date de dernière mise à jour figure en tête de page.</p>
 
-      <h2>14. Contact</h2>
+      <h2>15. Contact</h2>
       <p>Pour toute question : <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
     </section>
 
@@ -184,17 +192,23 @@
       <span class="lang-label">ENGLISH</span>
 
       <h2>1. Data controller</h2>
-      <p>OWNI is a mobile app that imports your purchases from your emails and keeps an inventory of them: invoices, return deadlines, parcel tracking. The controller of your personal data is:</p>
+      <p>OWNI is a mobile app that imports your purchases from your emails and keeps an inventory of them: invoices, return deadlines, legal guarantee, parcel tracking. It is available in France, Belgium and Luxembourg. The controller of your personal data is:</p>
       <p><strong>APLI SARLU</strong><br>
       Logt 51 Cité Ampefiloha, Antananarivo, Madagascar<br>
       NIF 4019287505 — STAT 62011 11 2025 0 10781 — RCS 2025B00769<br>
       Contact: <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
 
-      <h2>2. Data we process</h2>
+      <h2>2. Representative in the European Union</h2>
+      <p>APLI SARLU is established outside the European Union. In accordance with Article 27 of Regulation (EU) 2016/679 (GDPR), it has designated a representative in the Union:</p>
+      <p><strong>Shabir PIRBAY</strong><br>
+      Contact: <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
+      <p>You may address this representative, in addition to or instead of the controller, on any matter relating to the processing of your data. Data protection authorities may also contact him.</p>
+
+      <h2>3. Data we process</h2>
       <ul>
         <li><strong>OWNI account</strong>: your email address and your password (stored in hashed form by our authentication provider, never in clear text), and the account creation date.</li>
         <li><strong>Gmail link</strong>, if you connect a Gmail mailbox: the address of that mailbox, the refresh token issued by Google (which grants read-only access), the status of the link and the technical status of the last scan.</li>
-        <li><strong>Purchases</strong>: merchant, products, total amount, currency, purchase date, return deadline, order number, category, order status (shipped, delivered, cancelled, returned…), invoice location and the identifier of the original Gmail message.</li>
+        <li><strong>Purchases</strong>: merchant, products, total amount, currency, purchase date, return deadline, the origin of that deadline (announced by the merchant, estimated statutory period, or no right of withdrawal) and, in the latter case, the reason for the exclusion (for example “personalised item”), order number, category, order status (shipped, delivered, cancelled, returned…), invoice location and the identifier of the original Gmail message. The estimated end date of the legal guarantee of conformity (24 months from the purchase date) is calculated by the app from the purchase date; it is not stored on our servers.</li>
         <li><strong>Parcels</strong>: carrier, tracking number, tracking link, status announced by the email and shipping date.</li>
         <li><strong>Email classification records</strong>: for every email that is classified, including those that are ultimately not kept as a purchase (for example a subscription renewal, a booking or a discarded email), we keep the message identifier, the classification result and its reason, and any extracted information (document type, merchant, amount, currency, date, billing period). This record prevents the same email from being processed again at each scan.</li>
         <li><strong>Blocked senders</strong>: sender domains excluded from the scan for your account, if any.</li>
@@ -204,65 +218,67 @@
       </ul>
       <p>The app contains no analytics, advertising or tracking tool.</p>
 
-      <h2>3. What we read in your Gmail mailbox</h2>
+      <h2>4. What we read in your Gmail mailbox</h2>
       <p>Connecting Gmail is optional and requires your explicit authorisation through Google's consent screen. OWNI only requests <strong>read-only</strong> access: the app cannot send, modify or delete any email.</p>
-      <p>Once the mailbox is connected, an automatic scan runs about once an hour:</p>
+      <p>A first scan starts as soon as the mailbox is connected; it covers the emails of the last seven days. An automatic scan then runs about once an hour:</p>
       <ul>
         <li>OWNI searches for recent emails whose <strong>subject contains certain keywords</strong> related to a purchase, a delivery, a pickup, a return or a subscription. Emails you sent yourself and emails that Gmail files under the “Promotions” tab are excluded from the search.</li>
         <li>Matching emails are <strong>read in full</strong> (headers and body; PDF attachments are downloaded when they serve as the invoice or are needed for classification) and then classified automatically. A subject containing one of these keywords does not guarantee that the email is a purchase: emails unrelated to a purchase may therefore be read and classified, then discarded.</li>
-        <li>Only purchases of <strong>physical goods</strong> create an entry in your inventory. Shipping, invoice, cancellation and return emails complete an existing entry. Other emails create no entry; only the classification record described in section 2 remains.</li>
+        <li>Only purchases of <strong>physical goods</strong> create an entry in your inventory. Shipping, invoice, cancellation and return emails complete an existing entry. Other emails create no entry; only the classification record described in section 3 remains.</li>
       </ul>
 
-      <h2>4. Purposes</h2>
+      <h2>5. Purposes</h2>
       <p>Your data is used only to provide the user-facing features of the app:</p>
       <ul>
         <li>building the inventory of your purchases;</li>
         <li>storing your invoices and letting you view them;</li>
         <li>tracking return deadlines and alerting you, in the app and by email;</li>
         <li>displaying the tracking of your parcels;</li>
-        <li>managing your account and sending the emails required for it to work (verification codes, password reset).</li>
+        <li>displaying the estimated end date of the legal guarantee of conformity of your purchases;</li>
+        <li>managing your account and sending the emails required for it to work (email address confirmation, password reset code).</li>
       </ul>
+      <p>The periods shown rely on European rules common to France, Belgium and Luxembourg: the fourteen-day right of withdrawal for distance purchases (Directive 2011/83/EU) and the two-year legal guarantee of conformity (Directive (EU) 2019/771), as transposed in each of these countries. Since it does not know the delivery date, OWNI calculates them from the purchase date: they are estimates, and replace neither the merchant's terms nor legal advice.</p>
       <p>We do not sell your data. We do not use it for advertising or for marketing profiling.</p>
 
-      <h2>5. Legal bases</h2>
+      <h2>6. Legal bases</h2>
       <ul>
         <li><strong>Performance of the service</strong> you request by creating an account: account management, inventory, invoices, return deadlines, parcel tracking.</li>
-        <li><strong>Your consent</strong> for access to your Gmail mailbox, which you can withdraw at any time (see section 11).</li>
+        <li><strong>Your consent</strong> for access to your Gmail mailbox, which you can withdraw at any time (see section 12).</li>
       </ul>
 
-      <h2>6. Recipients and processors</h2>
+      <h2>7. Recipients and processors</h2>
       <p>Your data is shared only with the providers required to run the service:</p>
       <ul>
-        <li><strong>Supabase</strong> — hosting of the database, authentication, files and server-side processing. Hosting region: Paris, France (European Union). Data: all the data listed in section 2, except the session stored on your device.</li>
+        <li><strong>Supabase</strong> — hosting of the database, authentication, files and server-side processing. Hosting region: Paris, France (European Union). Data: all the data listed in section 3, except the session stored on your device.</li>
         <li><strong>Google</strong> — OAuth sign-in and read-only Gmail API. Google is the source of the emails; OWNI only sends it access requests and, where applicable, the revocation of the authorisation.</li>
         <li><strong>Anthropic</strong> (United States) — automatic classification and extraction using artificial intelligence. For each email to be classified, we send: the sender and recipient, the address of the connected Gmail mailbox, the subject, the date, the names of the attachments and the body of the email (up to 24,000 characters). When the body mentions no amount, the PDF attachment is also sent (up to 2 MB). This also applies to emails that are ultimately not kept as a purchase. Two Anthropic models are used: a first one for all emails to be classified, a second one to review uncertain cases. Under Anthropic's commercial terms applicable to its API, the data sent is not used to train its models.</li>
-        <li><strong>Resend</strong> (company established in the United States; sending processed in its Ireland region, European Union) — email delivery. Data: the email address of your OWNI account and the content of the emails sent, namely return alerts (merchant, products, amount, deadline) and authentication emails (verification codes, password reset).</li>
+        <li><strong>Resend</strong> (company established in the United States; sending processed in its Ireland region, European Union) — email delivery. Data: the email address of your OWNI account and the content of the emails sent, namely return alerts (merchant, products, amount, deadline), sent from <strong>alertes@owni.pro</strong>, and account emails (email address confirmation, password reset code), sent from <strong>noreply@owni.pro</strong>.</li>
         <li><strong>Expo</strong> (United States) — distribution of app updates. At launch, the app queries the update service; it sends it no purchase or account data. As with any Internet connection, technical information (IP address, app version) is visible to that service.</li>
         <li><strong>GitHub Pages</strong> (United States) — hosting of this website. The host may record technical connection information (IP address) when you visit. This website sets no cookies.</li>
       </ul>
       <p>When you open a parcel tracking link, the carrier's page opens in your browser; it is governed by that carrier's own policy.</p>
 
-      <h2>7. Transfers outside the European Union</h2>
+      <h2>8. Transfers outside the European Union</h2>
       <p>Some providers are established outside the European Union, notably in the United States (Anthropic, Resend, Expo, GitHub), and the data controller is established in Madagascar. These transfers are governed by those providers' contractual data protection commitments, such as the European Commission's standard contractual clauses where they apply. You can write to us for further details.</p>
 
-      <h2>8. Use of Google data</h2>
+      <h2>9. Use of Google data</h2>
       <p>OWNI's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular:</p>
       <ul>
-        <li>Gmail data is used only to provide the user-facing features of the app described in section 4;</li>
-        <li>it is transferred to third parties only when necessary to provide those features (see section 6), to comply with applicable law, or for security purposes;</li>
+        <li>Gmail data is used only to provide the user-facing features of the app described in section 5;</li>
+        <li>it is transferred to third parties only when necessary to provide those features (see section 7), to comply with applicable law, or for security purposes;</li>
         <li>no human reads your emails, unless we have your explicit consent for specific messages, it is necessary for security purposes (for example investigating abuse), or it is required to comply with applicable law;</li>
         <li>it is not used for advertising, is not sold, and is not used to develop, improve or train generalised artificial intelligence models.</li>
       </ul>
 
-      <h2>9. Retention</h2>
+      <h2>10. Retention</h2>
       <ul>
-        <li>Your data is kept <strong>for as long as your account exists</strong>. It is deleted when the account is deleted (see section 11).</li>
+        <li>Your data is kept <strong>for as long as your account exists</strong>. It is deleted when the account is deleted (see section 12).</li>
         <li>The Gmail link and its token are deleted as soon as you disconnect your Gmail mailbox.</li>
         <li>The technical counters that limit the number of Gmail connection attempts are erased after 24 hours.</li>
         <li>The links used to open an invoice are temporary: they expire after 120 seconds.</li>
       </ul>
 
-      <h2>10. Security</h2>
+      <h2>11. Security</h2>
       <ul>
         <li>Communications between the app and our servers are encrypted in transit (HTTPS/TLS).</li>
         <li>Access to data is isolated per user: each account can only read its own data.</li>
@@ -271,22 +287,22 @@
         <li>On your device, the session is stored in encrypted form.</li>
       </ul>
 
-      <h2>11. Your rights and choices</h2>
-      <p>You have the right to access, rectify, erase and port your data, to object to its processing, and to withdraw your consent at any time. To exercise these rights, write to <a href="mailto:contact@owni.pro">contact@owni.pro</a>. You may also lodge a complaint with the French data protection authority, the CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>), or with the data protection authority of your country.</p>
+      <h2>12. Your rights and choices</h2>
+      <p>You have the right to access, rectify, erase and port your data, to object to its processing, and to withdraw your consent at any time. To exercise these rights, write to <a href="mailto:contact@owni.pro">contact@owni.pro</a>. These rights are granted by Regulation (EU) 2016/679 (GDPR), which applies in the same way in France, Belgium and Luxembourg. You may also lodge a complaint with the data protection authority of your country: in France, the CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>); in Belgium, the Autorité de protection des données (<a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener">www.autoriteprotectiondonnees.be</a>); in Luxembourg, the Commission nationale pour la protection des données (<a href="https://cnpd.public.lu" target="_blank" rel="noopener">cnpd.public.lu</a>).</p>
       <p>You can also act directly (the app's interface is in French; its labels are quoted as displayed):</p>
       <ul>
         <li><strong>Disconnect Gmail</strong>: in the app, Profil › Connexion Gmail › “Déconnecter”. The authorisation is then revoked with Google and scans stop; purchases already imported remain in your account. You can also revoke access from your <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google account</a>.</li>
-        <li><strong>Stop receiving email alerts</strong>: through the unsubscribe link in every alert, or the “Alertes de retour par email” switch in the profile.</li>
+        <li><strong>Stop receiving email alerts</strong>: through the unsubscribe link in every alert, or the “Alertes de retour par e-mail” switch in the profile.</li>
         <li><strong>Delete your account and your data</strong>: in the app, Profil › “Supprimer mon compte”, by typing the word “SUPPRIMER”; deletion is immediate. You can also request it by email. Both procedures are detailed on the <a href="/delete-account.html#en">Account deletion</a> page.</li>
       </ul>
 
-      <h2>12. Intended audience</h2>
+      <h2>13. Intended audience</h2>
       <p>OWNI is intended only for people aged 18 and over. We do not knowingly collect data about minors; if you believe a minor has provided us with data, write to <a href="mailto:contact@owni.pro">contact@owni.pro</a> so that we can delete it.</p>
 
-      <h2>13. Changes</h2>
+      <h2>14. Changes</h2>
       <p>This policy is updated when the way the app works changes. The date of the last update is shown at the top of the page.</p>
 
-      <h2>14. Contact</h2>
+      <h2>15. Contact</h2>
       <p>For any question: <a href="mailto:contact@owni.pro">contact@owni.pro</a></p>
     </section>
   </div>
