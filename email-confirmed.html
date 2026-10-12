@@ -124,6 +124,20 @@
     /* Rien d'autre que l'affichage : la classe choisit lequel des deux
        messages est visible. Aucune requête, aucun stockage. */
     if (owniLinkFailed) document.body.className = 'link-failed';
+
+    /* Langue : les deux blocs restent toujours visibles. Si le téléphone
+       n'est pas en français, le bloc anglais passe simplement en premier.
+       Lecture de navigator.language seulement — rien n'est envoyé ni conservé.
+       Sans JavaScript, la page reste telle quelle : français, puis anglais. */
+    try {
+      var owniLang = (navigator.language || 'fr').toLowerCase();
+      if (owniLang.indexOf('fr') !== 0) {
+        var owniFr = document.getElementById('fr');
+        var owniEn = document.getElementById('en');
+        owniFr.parentNode.insertBefore(owniEn, owniFr);
+        document.documentElement.lang = 'en';
+      }
+    } catch (e) {}
   </script>
 </body>
 </html>

@@ -7,10 +7,10 @@
   <meta name="application-name" content="OWNI">
   <meta property="og:site_name" content="OWNI">
   <meta property="og:title" content="OWNI">
-  <meta property="og:description" content="OWNI tient l'inventaire de vos achats en ligne : factures, délais de retour, suivi de colis.">
+  <meta property="og:description" content="OWNI tient l'inventaire de vos achats en ligne : factures, délais de retour, suivi de colis, abonnements.">
   <meta property="og:url" content="https://owni.pro">
   <meta property="og:type" content="website">
-  <meta name="description" content="OWNI détecte vos achats en ligne depuis vos e-mails et centralise factures, délais de retour et suivi de colis.">
+  <meta name="description" content="OWNI détecte vos achats en ligne depuis vos e-mails et centralise factures, délais de retour, suivi de colis et abonnements.">
   <style>
     :root {
       --primary: #00D4C4;
@@ -96,14 +96,14 @@
     <div class="hero">
       <h1 class="logo">OWNI</h1>
       <p class="tagline">OWNI tient l'inventaire de vos achats en ligne à partir de vos e-mails.
-      Factures, délais de retour, suivi de colis — sans saisie manuelle.</p>
-      <p class="platform">Application mobile pour Android, proposée en France, en Belgique et au Luxembourg. Réservée aux personnes de 18 ans et plus.</p>
+      Factures, délais de retour, suivi de colis, abonnements — sans saisie manuelle.</p>
+      <p class="platform">Application mobile pour Android, proposée en France, en Belgique, au Luxembourg, au Royaume-Uni et aux États-Unis, en français et en anglais. Réservée aux personnes de 18 ans et plus.</p>
     </div>
 
     <div class="features">
       <div class="card">
         <h2>Détection automatique</h2>
-        <p>Avec votre autorisation, OWNI lit vos e-mails d'achat (accès en lecture seule à votre boîte Gmail) et crée une fiche pour chaque commande de biens physiques : marchand, produits, montant, date. Les achats numériques, les services et les abonnements ne sont pas ajoutés à l'inventaire.</p>
+        <p>Avec votre autorisation, OWNI lit vos e-mails d'achat (accès en lecture seule à votre boîte Gmail) et crée une fiche pour chaque commande de biens physiques : marchand, produits, montant, date. Les achats numériques et les services ne sont pas ajoutés à l'inventaire ; les abonnements sont listés à part.</p>
       </div>
       <div class="card">
         <h2>Coffre-fort de factures</h2>
@@ -111,15 +111,23 @@
       </div>
       <div class="card">
         <h2>Alertes de retour</h2>
-        <p>Quand le délai de retour d'un achat se referme, OWNI l'affiche dans l'application et vous envoie un e-mail. Le délai est celui qu'annonce le marchand ; à défaut, c'est le délai légal de rétractation de quatorze jours, estimé à partir de la date d'achat. Un achat sans droit de rétractation, comme un bien personnalisé, est signalé comme tel et ne déclenche aucune alerte. Les alertes par e-mail se désactivent depuis le profil ou par le lien présent dans chaque message.</p>
+        <p>Quand le délai de retour d'un achat se referme, OWNI l'affiche dans l'application et vous envoie un e-mail. Le délai est celui qu'annonce le marchand ; à défaut, c'est le délai légal de votre pays de résidence lorsqu'il en existe un, estimé à partir de la date d'achat. Un achat sans droit de rétractation, comme un bien personnalisé, est signalé comme tel et ne déclenche aucune alerte. Les alertes par e-mail se désactivent depuis le profil ou par le lien présent dans chaque message.</p>
       </div>
       <div class="card">
         <h2>Suivi de colis</h2>
-        <p>Les e-mails d'expédition sont rattachés à vos commandes : transporteur, numéro de suivi et lien vers la page du transporteur. L'état affiché est celui annoncé par l'e-mail.</p>
+        <p>Les e-mails d'expédition sont rattachés à vos commandes : transporteur et numéro de suivi. Les colis La Poste, Colissimo et Chronopost sont suivis en direct dans l'application, étape par étape. Pour les autres transporteurs, OWNI affiche l'état annoncé par l'e-mail et un lien vers le site du transporteur.</p>
       </div>
       <div class="card">
-        <h2>Garantie légale</h2>
-        <p>Chaque fiche affiche la garantie légale de conformité : 24 mois, la durée prévue par le droit européen et appliquée en France, en Belgique et au Luxembourg. L'échéance est une estimation, calculée à partir de la date d'achat ; en droit, la garantie court à compter de la livraison. Les garanties commerciales des marchands ne sont pas prises en compte.</p>
+        <h2>Abonnements</h2>
+        <p>Un onglet liste les abonnements repérés dans vos e-mails : montant, périodicité, prochaine échéance et, quand l'e-mail le fournit, lien de gestion chez le fournisseur. OWNI ne résilie rien à votre place : la résiliation se fait toujours chez le fournisseur.</p>
+      </div>
+      <div class="card">
+        <h2>Alertes de sécurité</h2>
+        <p>Parmi les e-mails d'achat, de livraison et d'abonnement, ceux qui ressemblent à de l'hameçonnage — fausse facture, faux avis de livraison — sont signalés dans l'application, avec les raisons de l'alerte. OWNI ne modifie, ne déplace et ne supprime rien dans votre boîte, et n'analyse pas vos autres e-mails.</p>
+      </div>
+      <div class="card">
+        <h2>Vos droits selon votre pays</h2>
+        <p>Les règles affichées suivent le pays de résidence choisi dans le profil. France, Belgique, Luxembourg : rétractation de quatorze jours et garantie légale de conformité de deux ans. Royaume-Uni : annulation sous quatorze jours, et rappel des droits du Consumer Rights Act 2015. États-Unis : seule la politique annoncée par le marchand est affichée. Les échéances sont des estimations, calculées à partir de la date d'achat ; les garanties commerciales des marchands ne sont pas prises en compte.</p>
       </div>
     </div>
 
@@ -127,7 +135,8 @@
       <h2>Comment fonctionne OWNI ?</h2>
       <p>Vous connectez votre compte Gmail à OWNI en donnant votre autorisation explicite via Google.
       OWNI recherche alors, en lecture seule, les e-mails dont l'objet évoque un achat, une livraison,
-      un retour ou un abonnement, et les classe automatiquement pour construire l'inventaire de vos achats.
+      un retour ou un abonnement, et les analyse automatiquement pour construire l'inventaire de vos achats,
+      la liste de vos abonnements et vos alertes de sécurité.
       OWNI ne modifie, n'envoie et ne supprime jamais aucun e-mail, et vous pouvez retirer l'accès à tout
       moment depuis l'application. Le détail figure dans la
       <a href="/privacy.html">politique de confidentialité</a>.</p>
@@ -138,14 +147,14 @@
     <div class="hero">
       <p class="logo" aria-hidden="true">OWNI</p>
       <p class="tagline">OWNI keeps an inventory of your online purchases from your emails.
-      Invoices, return deadlines, parcel tracking — with no manual entry.</p>
-      <p class="platform">Mobile app for Android, available in France, Belgium and Luxembourg. For people aged 18 and over. The app's interface is in French.</p>
+      Invoices, return deadlines, parcel tracking, subscriptions — with no manual entry.</p>
+      <p class="platform">Mobile app for Android, available in France, Belgium, Luxembourg, the United Kingdom and the United States, in French and in English. For people aged 18 and over.</p>
     </div>
 
     <div class="features">
       <div class="card">
         <h2>Automatic detection</h2>
-        <p>With your authorisation, OWNI reads your purchase emails (read-only access to your Gmail mailbox) and creates an entry for each order of physical goods: merchant, products, amount, date. Digital purchases, services and subscriptions are not added to the inventory.</p>
+        <p>With your authorisation, OWNI reads your purchase emails (read-only access to your Gmail mailbox) and creates an entry for each order of physical goods: merchant, products, amount, date. Digital purchases and services are not added to the inventory; subscriptions are listed separately.</p>
       </div>
       <div class="card">
         <h2>Invoice vault</h2>
@@ -153,15 +162,23 @@
       </div>
       <div class="card">
         <h2>Return alerts</h2>
-        <p>When the return window of a purchase is about to close, OWNI shows it in the app and sends you an email. The window is the one announced by the merchant; failing that, it is the fourteen-day statutory withdrawal period, estimated from the purchase date. A purchase with no right of withdrawal, such as a personalised item, is flagged as such and triggers no alert. Email alerts can be turned off from the profile or through the link in every message.</p>
+        <p>When the return window of a purchase is about to close, OWNI shows it in the app and sends you an email. The window is the one announced by the merchant; failing that, it is the statutory period of your country of residence where one exists, estimated from the purchase date. A purchase with no right of withdrawal, such as a personalised item, is flagged as such and triggers no alert. Email alerts can be turned off from the profile or through the link in every message.</p>
       </div>
       <div class="card">
         <h2>Parcel tracking</h2>
-        <p>Shipping emails are attached to your orders: carrier, tracking number and a link to the carrier's page. The status shown is the one announced by the email.</p>
+        <p>Shipping emails are attached to your orders: carrier and tracking number. La Poste, Colissimo and Chronopost parcels are tracked live in the app, step by step. For other carriers, OWNI shows the status announced by the email and a link to the carrier's website.</p>
       </div>
       <div class="card">
-        <h2>Legal guarantee</h2>
-        <p>Each entry shows the legal guarantee of conformity: 24 months, the period set by EU law and applied in France, Belgium and Luxembourg. The end date is an estimate, calculated from the purchase date; in law, the guarantee runs from delivery. Merchants' commercial warranties are not taken into account.</p>
+        <h2>Subscriptions</h2>
+        <p>A tab lists the subscriptions found in your emails: amount, billing period, next payment and, when the email provides it, the provider's management link. OWNI cancels nothing on your behalf: cancelling is always done with the provider.</p>
+      </div>
+      <div class="card">
+        <h2>Security alerts</h2>
+        <p>Among purchase, delivery and subscription emails, those that look like phishing — a fake invoice, a fake delivery notice — are flagged in the app, with the reasons for the alert. OWNI never modifies, moves or deletes anything in your mailbox, and does not analyse your other emails.</p>
+      </div>
+      <div class="card">
+        <h2>Your rights by country</h2>
+        <p>The rules shown follow the country of residence chosen in the profile. France, Belgium, Luxembourg: fourteen-day withdrawal and the two-year legal guarantee of conformity. United Kingdom: fourteen-day cancellation, and a reminder of your rights under the Consumer Rights Act 2015. United States: only the policy announced by the merchant is shown. Deadlines are estimates, calculated from the purchase date; merchants' commercial warranties are not taken into account.</p>
       </div>
     </div>
 
@@ -169,7 +186,8 @@
       <h2>How does OWNI work?</h2>
       <p>You connect your Gmail account to OWNI by giving your explicit authorisation through Google.
       OWNI then searches, with read-only access, for emails whose subject relates to a purchase, a delivery,
-      a return or a subscription, and classifies them automatically to build the inventory of your purchases.
+      a return or a subscription, and analyses them automatically to build the inventory of your purchases,
+      the list of your subscriptions and your security alerts.
       OWNI never modifies, sends or deletes any email, and you can withdraw access at any time from the app.
       Details are in the <a href="/privacy.html#en">privacy policy</a>.</p>
     </div>
