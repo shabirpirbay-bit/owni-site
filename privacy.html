@@ -115,7 +115,7 @@
 
       <h2>4. Ce que nous lisons dans votre boîte Gmail</h2>
       <p>La connexion Gmail est facultative et se fait avec votre autorisation explicite, par l'écran de consentement de Google. OWNI ne demande qu'un accès en <strong>lecture seule</strong> : l'application ne peut ni envoyer, ni modifier, ni déplacer, ni supprimer un e-mail.</p>
-      <p>Une première analyse est lancée dès la connexion de la boîte ; elle porte sur les e-mails des quatre-vingt-dix derniers jours et peut prendre de quelques minutes à plus d'une demi-heure selon leur nombre. Un relevé automatique a ensuite lieu environ toutes les heures :</p>
+      <p>Une première analyse est lancée dès la connexion de la boîte ; elle porte sur les e-mails des quatre-vingt-dix derniers jours et peut prendre de quelques minutes à une demi-heure selon leur nombre. Un relevé automatique a ensuite lieu environ toutes les heures :</p>
       <ul>
         <li>OWNI recherche les e-mails récents dont <strong>l'objet contient certains mots-clés</strong> liés à un achat, une livraison, un retrait, un retour ou un abonnement. Les e-mails que vous avez envoyés et ceux que Gmail range dans l'onglet « Promotions » sont exclus de la recherche.</li>
         <li>Les e-mails correspondants sont <strong>lus en entier</strong> (en-têtes et corps ; les pièces jointes PDF sont téléchargées lorsqu'elles servent de facture ou sont nécessaires au classement) puis classés automatiquement. Un objet qui contient l'un de ces mots-clés ne garantit pas qu'il s'agisse d'un achat : des e-mails sans rapport avec un achat peuvent donc être lus et classés, puis écartés.</li>
@@ -157,7 +157,7 @@
         <li><strong>Google</strong> — connexion OAuth et API Gmail en lecture seule. Google est la source des e-mails ; OWNI lui adresse uniquement les demandes d'accès et, le cas échéant, la révocation de l'autorisation.</li>
         <li><strong>Anthropic</strong> (États-Unis) — classement et extraction automatiques par intelligence artificielle. Pour chaque e-mail à classer, nous transmettons : l'expéditeur et le destinataire, l'adresse de la boîte Gmail connectée, l'objet, la date, le nom des pièces jointes et le corps de l'e-mail (jusqu'à 24 000 caractères). Lorsque le corps ne mentionne aucun montant, la pièce jointe PDF est également transmise (jusqu'à 2 Mo). Cela vaut aussi pour des e-mails qui ne sont finalement pas retenus comme achat, notamment les échéances d'abonnement. Deux modèles d'Anthropic sont utilisés : un premier pour tous les e-mails à classer, un second pour relire les cas incertains. L'analyse de sécurité décrite en section 4 fait partie de ce même traitement : elle ne fait intervenir aucun autre prestataire d'intelligence artificielle. Selon les conditions commerciales d'Anthropic applicables à son API, les données transmises ne servent pas à entraîner ses modèles.</li>
         <li><strong>Resend</strong> (société établie aux États-Unis ; envoi traité dans sa région Irlande, Union européenne) — envoi des e-mails. Données : l'adresse e-mail de votre compte OWNI et le contenu des e-mails envoyés, c'est-à-dire les alertes de retour (marchand, produits, montant, date limite), envoyées depuis <strong>alertes@owni.pro</strong>, et les e-mails de compte (confirmation de l'adresse e-mail, code de réinitialisation du mot de passe), envoyés depuis <strong>noreply@owni.pro</strong>.</li>
-        <li><strong>La Poste</strong> (France, Union européenne) — suivi en direct des colis La Poste, Colissimo et Chronopost, par l'API de suivi de La Poste. Données transmises : <strong>uniquement</strong> le numéro de suivi ; jamais votre nom, votre adresse, votre adresse e-mail ni le détail de l'achat. L'état du colis est obtenu par interrogation périodique, qui cesse une fois le colis livré.</li>
+        <li><strong>La Poste</strong> (France, Union européenne) — suivi en direct des colis La Poste, Colissimo et Chronopost, par l'API de suivi de La Poste. Données transmises : le numéro de suivi (et la langue de réponse souhaitée) ; <strong>aucune autre donnée</strong> — jamais votre nom, votre adresse, votre adresse e-mail ni le détail de l'achat. L'état du colis est obtenu par interrogation périodique, qui cesse une fois le colis livré.</li>
         <li><strong>Expo</strong> (États-Unis) — distribution des mises à jour de l'application. Au lancement, l'application interroge le service de mises à jour ; elle ne lui transmet aucune donnée d'achat ni de compte. Comme pour toute connexion Internet, des informations techniques (adresse IP, version de l'application) sont visibles par ce service.</li>
         <li><strong>GitHub Pages</strong> (États-Unis) — hébergement du présent site. L'hébergeur peut enregistrer des informations techniques de connexion (adresse IP) lors de votre visite. Ce site ne dépose aucun cookie.</li>
       </ul>
@@ -232,7 +232,7 @@
       <span class="lang-label">ENGLISH</span>
 
       <h2>1. Data controller</h2>
-      <p>OWNI is a mobile app that imports your purchases from your emails and keeps an inventory of them: invoices, return deadlines, guarantee, parcel tracking, subscriptions and warnings about suspicious emails. It is available in France, Belgium, Luxembourg, the United Kingdom and the United States, in French and in English. The controller of your personal data is:</p>
+      <p>OWNI is a mobile app that imports your purchases from your emails and keeps an inventory of them: receipts, return deadlines, warranty, package tracking, subscriptions and warnings about suspicious emails. It is available in France, Belgium, Luxembourg, the United Kingdom and the United States, in French and in English. The controller of your personal data is:</p>
       <p><strong>APLI SARLU</strong><br>
       Logt 51 Cité Ampefiloha, Antananarivo, Madagascar<br>
       NIF 4019287505 — STAT 62011 11 2025 0 10781 — RCS 2025B00769<br>
@@ -251,38 +251,38 @@
       <ul>
         <li><strong>OWNI account</strong>: your email address and your password (stored in hashed form by our authentication provider, never in clear text), and the account creation date.</li>
         <li><strong>Gmail link</strong>, if you connect a Gmail mailbox: the address of that mailbox, the refresh token issued by Google (which grants read-only access), the status of the link and the technical status of the last scan.</li>
-        <li><strong>Purchases</strong>: merchant, products, total amount, currency, purchase date, return deadline, the origin of that deadline (announced by the merchant, estimated statutory period, or no right of withdrawal) and, in the latter case, the reason for the exclusion (for example “personalised item”), order number, category, order status (shipped, delivered, cancelled, returned…), invoice location and the identifier of the original Gmail message. When your country of residence is France, Belgium or Luxembourg, the estimated end date of the legal guarantee of conformity (24 months from the purchase date) is calculated by the app from the purchase date; it is not stored on our servers.</li>
-        <li><strong>Parcels</strong>: carrier, tracking number, tracking link, status announced by the email and shipping date. For parcels tracked live (La Poste, Colissimo, Chronopost), we also keep the latest known status, the estimated delivery date when it is provided, and the timeline of the parcel's events.</li>
+        <li><strong>Purchases</strong>: retailer, products, total amount, currency, purchase date, return deadline, the origin of that deadline (announced by the retailer, estimated statutory period, or no right of withdrawal) and, in the latter case, the reason for the exclusion (for example “personalised item”), order number, category, order status (shipped, delivered, cancelled, returned…), receipt location and the identifier of the original Gmail message. When your country of residence is France, Belgium or Luxembourg, the estimated end date of the legal guarantee of conformity (24 months from the purchase date) is calculated by the app from the purchase date; it is not stored on our servers.</li>
+        <li><strong>Packages</strong>: carrier, tracking number, tracking link, status announced by the email and shipping date. For packages tracked live (La Poste, Colissimo, Chronopost), we also keep the latest known status, the estimated delivery date when it is provided, and the timeline of the package's events.</li>
         <li><strong>Subscriptions</strong>: when a subscription renewal email is detected, we store the service name, amount, currency, billing period, the dates of the last and next payment, the status of the subscription and the provider's management link if it is present in the email. The history of the renewals found (the date, amount, currency and original Gmail message identifier of each one) is kept with the subscription, and deleted with it.</li>
         <li><strong>Security alerts</strong>: when an email related to a purchase, a delivery or a subscription shows signs of phishing (fake invoice, fake delivery notice, fake fee to pay), we store the Gmail message identifier, the risk level (“suspicious” or “likely scam”), the brand apparently imitated, the displayed sender and its actual domain, the subject and date of the message, the technical signals that triggered the alert (for example SPF/DKIM/DMARC authentication failure, lookalike domain, deceptive link) and the reasons for the alert. <strong>The body of the email is not stored</strong> for this purpose. OWNI never modifies, moves or deletes these emails; the alert is shown to you in the app.</li>
-        <li><strong>Email classification records</strong>: for every email that is classified, including those that are ultimately not kept as a purchase (for example a subscription renewal, a booking or a discarded email), we keep the message identifier, the classification result and its reason, and any extracted information (document type, merchant, amount, currency, date, billing period). This record prevents the same email from being processed again at each scan.</li>
+        <li><strong>Email classification records</strong>: for every email that is classified, including those that are ultimately not kept as a purchase (for example a subscription renewal, a booking or a discarded email), we keep the message identifier, the classification result and its reason, and any extracted information (document type, retailer, amount, currency, date, billing period). This record prevents the same email from being processed again at each scan.</li>
         <li><strong>Blocked senders</strong>: sender domains excluded from the scan for your account, if any.</li>
         <li><strong>Preferences</strong>: whether or not you want to receive return alerts by email, your language (automatic, French or English) and your country of residence (two-letter code). The first time you open your account, this country is set from your phone's region settings and saved; you can change it at any time in the profile. The app does not read your geographic location.</li>
-        <li><strong>Invoices</strong>: the PDF attachments of purchase emails, kept in private storage.</li>
+        <li><strong>Receipts</strong>: the PDF attachments of purchase emails, kept in private storage.</li>
         <li><strong>On your device</strong>: your sign-in session, stored in encrypted form, as well as your language choice and your country code, so that the app opens in the right language and under the right rules.</li>
       </ul>
       <p>The app contains no analytics, advertising or tracking tool.</p>
 
       <h2>4. What we read in your Gmail mailbox</h2>
       <p>Connecting Gmail is optional and requires your explicit authorisation through Google's consent screen. OWNI only requests <strong>read-only</strong> access: the app cannot send, modify, move or delete any email.</p>
-      <p>A first scan starts as soon as the mailbox is connected; it covers the emails of the last ninety days and may take from a few minutes to more than half an hour depending on how many there are. An automatic scan then runs about once an hour:</p>
+      <p>A first scan starts as soon as the mailbox is connected; it covers the emails of the last ninety days and may take from a few minutes to half an hour depending on how many there are. An automatic scan then runs about once an hour:</p>
       <ul>
         <li>OWNI searches for recent emails whose <strong>subject contains certain keywords</strong> related to a purchase, a delivery, a pickup, a return or a subscription. Emails you sent yourself and emails that Gmail files under the “Promotions” tab are excluded from the search.</li>
-        <li>Matching emails are <strong>read in full</strong> (headers and body; PDF attachments are downloaded when they serve as the invoice or are needed for classification) and then classified automatically. A subject containing one of these keywords does not guarantee that the email is a purchase: emails unrelated to a purchase may therefore be read and classified, then discarded.</li>
-        <li>These same emails, and no others, go through an automatic <strong>security check</strong>: OWNI looks at the sender's authentication results (SPF, DKIM, DMARC), whether the displayed name matches the actual domain, where the links lead, and certain wording typical of phishing. An email found suspicious creates no purchase, subscription or parcel tracking: it produces a security alert (see section 3). OWNI does not analyse the rest of your mailbox.</li>
-        <li>Only purchases of <strong>physical goods</strong> create an entry in your inventory. Shipping, invoice, cancellation and return emails complete an existing entry. Subscription renewals feed the list of your subscriptions. Other emails create no entry; only the classification record described in section 3 remains.</li>
+        <li>Matching emails are <strong>read in full</strong> (headers and body; PDF attachments are downloaded when they serve as the receipt or are needed for classification) and then classified automatically. A subject containing one of these keywords does not guarantee that the email is a purchase: emails unrelated to a purchase may therefore be read and classified, then discarded.</li>
+        <li>These same emails, and no others, go through an automatic <strong>security check</strong>: OWNI looks at the sender's authentication results (SPF, DKIM, DMARC), whether the displayed name matches the actual domain, where the links lead, and certain wording typical of phishing. An email found suspicious creates no purchase, subscription or package tracking: it produces a security alert (see section 3). OWNI does not analyse the rest of your mailbox.</li>
+        <li>Only purchases of <strong>physical goods</strong> create an entry in your inventory. Shipping, receipt, cancellation and return emails complete an existing entry. Subscription renewals feed the list of your subscriptions. Other emails create no entry; only the classification record described in section 3 remains.</li>
       </ul>
 
       <h2>5. Purposes</h2>
       <p>Your data is used only to provide the user-facing features of the app:</p>
       <ul>
         <li>building the inventory of your purchases;</li>
-        <li>storing your invoices and letting you view them;</li>
+        <li>storing your receipts and letting you view them;</li>
         <li>tracking return deadlines and alerting you, in the app and by email;</li>
-        <li>displaying the tracking of your parcels: live, updated regularly, for La Poste, Colissimo and Chronopost; for other carriers, through a link to the carrier's website when the email contains one or the app can build it;</li>
+        <li>displaying the tracking of your packages: live, updated regularly, for La Poste, Colissimo and Chronopost; for other carriers, through a link to the carrier's website when the email contains one or the app can build it;</li>
         <li>recognising your subscriptions from renewal emails and keeping a list of them (OWNI <strong>never</strong> cancels a subscription on your behalf);</li>
         <li>spotting suspicious emails (phishing, fake invoice, fake delivery notice) and flagging them to you in the app;</li>
-        <li>showing the legal return and guarantee rules that match your country of residence, and the app in your language;</li>
+        <li>showing the legal return and warranty rules that match your country of residence, and the app in your language;</li>
         <li>managing your account and sending the emails required for it to work (email address confirmation, password reset code).</li>
       </ul>
       <p>The legal rules shown depend on your country of residence. The first time you open your account, this country is set from your phone's region settings and saved, before any Gmail mailbox is connected; the app tells you so in the profile, where you can change it at any time. If your phone's region matches none of the countries below, no legal rule is shown: only what the retailer states is. If that region cannot be read, the rules for France apply until you choose a country, and the app tells you so.</p>
@@ -296,7 +296,7 @@
 
       <h2>6. Legal bases</h2>
       <ul>
-        <li><strong>Performance of the service</strong> you request by creating an account: account management, inventory, invoices, return deadlines, parcel tracking, list of subscriptions, security alerts, language and country preferences.</li>
+        <li><strong>Performance of the service</strong> you request by creating an account: account management, inventory, receipts, return deadlines, package tracking, list of subscriptions, security alerts, language and country preferences.</li>
         <li><strong>Your consent</strong> for access to your Gmail mailbox, which you can withdraw at any time (see section 12).</li>
       </ul>
 
@@ -306,12 +306,12 @@
         <li><strong>Supabase</strong> — hosting of the database, authentication, files and server-side processing. Hosting region: Paris, France (European Union). Data: all the data listed in section 3, except the session stored on your device.</li>
         <li><strong>Google</strong> — OAuth sign-in and read-only Gmail API. Google is the source of the emails; OWNI only sends it access requests and, where applicable, the revocation of the authorisation.</li>
         <li><strong>Anthropic</strong> (United States) — automatic classification and extraction using artificial intelligence. For each email to be classified, we send: the sender and recipient, the address of the connected Gmail mailbox, the subject, the date, the names of the attachments and the body of the email (up to 24,000 characters). When the body mentions no amount, the PDF attachment is also sent (up to 2 MB). This also applies to emails that are ultimately not kept as a purchase, including subscription renewals. Two Anthropic models are used: a first one for all emails to be classified, a second one to review uncertain cases. The security check described in section 4 is part of this same processing: it involves no other artificial intelligence provider. Under Anthropic's commercial terms applicable to its API, the data sent is not used to train its models.</li>
-        <li><strong>Resend</strong> (company established in the United States; sending processed in its Ireland region, European Union) — email delivery. Data: the email address of your OWNI account and the content of the emails sent, namely return alerts (merchant, products, amount, deadline), sent from <strong>alertes@owni.pro</strong>, and account emails (email address confirmation, password reset code), sent from <strong>noreply@owni.pro</strong>.</li>
-        <li><strong>La Poste</strong> (France, European Union) — live tracking of La Poste, Colissimo and Chronopost parcels, through La Poste's tracking API. Data sent: <strong>only</strong> the tracking number; never your name, your postal address, your email address or the details of the purchase. The parcel's status is obtained by periodic polling, which stops once the parcel is delivered.</li>
+        <li><strong>Resend</strong> (company established in the United States; sending processed in its Ireland region, European Union) — email delivery. Data: the email address of your OWNI account and the content of the emails sent, namely return alerts (retailer, products, amount, deadline), sent from <strong>alertes@owni.pro</strong>, and account emails (email address confirmation, password reset code), sent from <strong>noreply@owni.pro</strong>.</li>
+        <li><strong>La Poste</strong> (France, European Union) — live tracking of La Poste, Colissimo and Chronopost packages, through La Poste's tracking API. Data sent: the tracking number (and the preferred response language); <strong>no other data</strong> — never your name, your postal address, your email address or the details of the purchase. The package's status is obtained by periodic polling, which stops once the package is delivered.</li>
         <li><strong>Expo</strong> (United States) — distribution of app updates. At launch, the app queries the update service; it sends it no purchase or account data. As with any Internet connection, technical information (IP address, app version) is visible to that service.</li>
         <li><strong>GitHub Pages</strong> (United States) — hosting of this website. The host may record technical connection information (IP address) when you visit. This website sets no cookies.</li>
       </ul>
-      <p>For other carriers, OWNI queries no service: the app only shows a link to the carrier's website, when one is available. When you open a parcel tracking link, or the management link of a subscription, the carrier's or provider's page opens in your browser; it is governed by its own policy.</p>
+      <p>For other carriers, OWNI queries no service: the app only shows a link to the carrier's website, when one is available. When you open a package tracking link, or the management link of a subscription, the carrier's or provider's page opens in your browser; it is governed by its own policy.</p>
 
       <h2>8. Transfers outside the European Union</h2>
       <p>Some providers are established outside the European Union, notably in the United States (Anthropic, Resend, Expo, GitHub), and the data controller is established in Madagascar. These transfers are governed by those providers' contractual data protection commitments, such as the European Commission's standard contractual clauses where they apply. You can write to us for further details.</p>
@@ -343,9 +343,9 @@
       <ul>
         <li>Your data is kept <strong>for as long as your account exists</strong>. It is deleted when the account is deleted (see section 12).</li>
         <li>The Gmail link and its token are deleted as soon as you disconnect your Gmail mailbox.</li>
-        <li>Live tracking of a parcel stops when it is delivered: its number is then no longer sent to La Poste.</li>
+        <li>Live tracking of a package stops when it is delivered: its number is then no longer sent to La Poste.</li>
         <li>The technical counters that limit the number of Gmail connection attempts are erased after 24 hours.</li>
-        <li>The links used to open an invoice are temporary: they expire after 120 seconds.</li>
+        <li>The links used to open an receipt are temporary: they expire after 120 seconds.</li>
       </ul>
 
       <h2>11. Security</h2>
@@ -353,7 +353,7 @@
         <li>Communications between the app and our servers are encrypted in transit (HTTPS/TLS).</li>
         <li>Access to data is isolated per user: each account can only read its own data.</li>
         <li>The Gmail token is kept on the server, in a table that neither the app nor other users can access; it is never sent to the app. It is protected by the hosting provider's disk encryption, without additional field-level encryption.</li>
-        <li>Invoices are kept in private storage, accessible only through temporary links.</li>
+        <li>Receipts are kept in private storage, accessible only through temporary links.</li>
         <li>On your device, the session is stored in encrypted form.</li>
       </ul>
 
